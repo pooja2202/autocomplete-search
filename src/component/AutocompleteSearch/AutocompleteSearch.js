@@ -93,18 +93,20 @@ const AutocompleteSearch = () => {
             />
           </div>
         </form>
-        <div className={styles.search_results} data-testid="search-results">
-          {searchResults.map((item, index) => (
-            <label
-              key={item.id}
-              onClick={() => handleSubmit(index)}
-              role="label"
-              data-testid={`search-results-label-0`} // Add data-testid attribute
-            >
-              {item.title}
-            </label>
-          ))}
-        </div>
+        {searchTerm.trim() !== "" && (
+          <div className={styles.search_results} data-testid="search-results">
+            {searchResults.length === 0 && <p>0 matches</p>}
+            {searchResults.map((item, index) => (
+              <label
+                key={item.id}
+                onClick={() => handleSubmit(index)}
+                data-testid={`search-results-label-${index}`}
+              >
+                {item.title}
+              </label>
+            ))}
+          </div>
+        )}
         {bookDetails && (
           <div className={styles.form_div_config}>
             <h2>{bookDetails.title}</h2>

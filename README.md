@@ -49,7 +49,7 @@ Once the build process is complete, the generated build files in the `build` fol
 This project relies on ReactJS and various packages from the React ecosystem. All dependencies are listed in the package.json file.
 
 # Notes
-Book data is fetched from a local JSON file named Data.json.
+Book data is fetched from a local JSON file named `Data.json`.
 The debounce technique is employed to improve search performance by delaying the search function execution.
 Clicking on a search result updates the book details and displays them below the search input.
 
