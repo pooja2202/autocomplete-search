@@ -1,0 +1,7 @@
+.app-container {
+  display: flex;
+  flex-direction: row;
+  padding-top: 60px; 
+  background-color: #f0f0f0;
+  height: calc(100vh - 60px);
+}
